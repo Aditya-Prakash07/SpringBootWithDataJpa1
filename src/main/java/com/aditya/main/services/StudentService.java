@@ -10,4 +10,6 @@ public interface StudentService {
 
 	public List<Student> getAllStdDetails();
 
+	public Student getStdDetails(long id);
+
 }

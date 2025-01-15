@@ -1,7 +1,5 @@
 package com.aditya.main;
 
-import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -33,18 +31,26 @@ public class SpringBootWithDataJpa1Application {
 //			System.out.println("Can't insert Student due to some reasion");
 //		}
 
-		// -------------------------Select Operations 1.
-		// --------------------------------
+//		 -------------------------Select Operations 1.--------------------------------
 
-		List<Student> stdList = stdService.getAllStdDetails();
-		for (Student std : stdList) {
-			System.out.println("Student ID : " + std.getId());
-			System.out.println("Student Roll no. : " + std.getRollno());
-			System.out.println("Student Marks : " + std.getMarks());
-			System.out.println("Student Name : " + std.getName());
+//		List<Student> stdList = stdService.getAllStdDetails();
+//		for (Student std : stdList) {
+//			System.out.println("Student ID : " + std.getId());
+//			System.out.println("Student Roll no. : " + std.getRollno());
+//			System.out.println("Student Marks : " + std.getMarks());
+//			System.out.println("Student Name : " + std.getName());
+//
+//			System.out.println("___________________________________________________________________________");
+//		}
+//		
 
-			System.out.println("___________________________________________________________________________");
-		}
+//		 -------------------------Select Operations 2.--------------------------------
+
+		Student std = stdService.getStdDetails(1l);
+		System.out.println("Student ID : " + std.getId());
+		System.out.println("Student Roll no. : " + std.getRollno());
+		System.out.println("Student Marks : " + std.getMarks());
+		System.out.println("Student Name : " + std.getName());
 
 	}
 
