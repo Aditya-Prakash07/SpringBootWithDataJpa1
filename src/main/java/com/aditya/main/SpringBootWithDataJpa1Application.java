@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.aditya.main.entities.Student;
 import com.aditya.main.services.StudentService;
 import com.aditya.main.services.StudentServiceImpl;
 
@@ -46,11 +45,33 @@ public class SpringBootWithDataJpa1Application {
 
 //		 -------------------------Select Operations 2.--------------------------------
 
-		Student std = stdService.getStdDetails(1l);
-		System.out.println("Student ID : " + std.getId());
-		System.out.println("Student Roll no. : " + std.getRollno());
-		System.out.println("Student Marks : " + std.getMarks());
-		System.out.println("Student Name : " + std.getName());
+//		Student std = stdService.getStdDetails(3l);
+//		if (!(std == null)) {
+//			System.out.println("Student ID : " + std.getId());
+//			System.out.println("Student Roll no. : " + std.getRollno());
+//			System.out.println("Student Marks : " + std.getMarks());
+//			System.out.println("Student Name : " + std.getName());
+//		} else {
+//			System.out.println("Student not fond.......!");
+//		}
+
+//		--------------------------Update Operation--------------------------------------
+//		boolean status = stdService.updateStdDetails(1l, 88.0f);
+//		if (status) {
+//			System.out.println("Student details updated Successfully.......!");
+//		} else {
+//			System.out.println("Can't update student details due to some ERROR");
+//		}
+
+//		---------------------------Delete Operation-------------------------------------
+		boolean status = stdService.deleteStdDetails(2l);
+		if (status) {
+			System.out.println(
+					"__________________________________________________________________________________________");
+			System.out.println("Student Details Deleted Successfully.......!");
+		} else {
+			System.out.println("Unable to Delete Student Details Due to some Error");
+		}
 
 	}
 

@@ -12,4 +12,7 @@ public interface StudentService {
 
 	public Student getStdDetails(long id);
 
+	public boolean updateStdDetails(long id, float marks);
+
+	public boolean deleteStdDetails(long id);
 }
